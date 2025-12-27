@@ -36,7 +36,7 @@ class SimpleMLflowStack(Stack):
             "TrackingServer",
             artifact_store_uri=f"s3://{bucket.bucket_name}/mlflow",
             role_arn=role.role_arn,
-            tracking_server_name="my-test-mlflow-server",
+            tracking_server_name="your-mlflow-server-name",
             tracking_server_size="Small",
         )
 
