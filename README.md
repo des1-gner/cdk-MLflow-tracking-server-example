@@ -39,8 +39,8 @@ npm install -g aws-cdk
 
 Edit `app.py` and update the following values:
 
-- Replace `YOUR_ACCOUNT_ID` with your AWS account ID
-- Replace `us-east-1` with your desired AWS region
+- Replace `<your-aws-account-id>` with your AWS account ID
+- Replace `<your-aws-sagemaker-domain-region>` with your desired AWS region
 
 ### 3. Customize Tracking Server Name (Optional)
 
@@ -54,16 +54,16 @@ tracking_server_name="your-mlflow-server-name",
 
 Edit `mlflow-policy.json` and update the S3 bucket ARN in both Resource entries:
 
-- Replace `YOUR_ACCOUNT_ID` with your AWS account ID in both lines containing the S3 bucket ARN
+- Replace `<your-aws-account-id>` with your AWS account ID in both lines containing the S3 bucket ARN
 
 ### 5. Deploy the Tracking Server
 
 ```bash
-cdk bootstrap  # Only required once per account/region
+cdk bootstrap
 cdk deploy
 ```
 
-Deployment takes approximately 5-10 minutes. Upon completion, the stack outputs will include the tracking server name, ARN, and S3 bucket name.
+Deployment takes approximately 5-20 minutes. Upon completion, the stack outputs will include the tracking server name, ARN, and S3 bucket name.
 
 ### 6. Configure Domain Execution Role Permissions
 
