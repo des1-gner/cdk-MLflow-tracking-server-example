@@ -70,19 +70,19 @@ Deployment takes approximately 5-20 minutes. Upon completion, the stack outputs 
 Retrieve your SageMaker Domain execution role name:
 
 ```bash
-aws sagemaker describe-domain --domain-id YOUR_DOMAIN_ID --query 'DefaultUserSettings.ExecutionRole' --output text
+aws sagemaker describe-domain --domain-id <your-sagemaker-domain-id> --query 'DefaultUserSettings.ExecutionRole' --output text
 ```
 
 Attach the MLflow permissions to the execution role:
 
 ```bash
 aws iam put-role-policy \
-  --role-name YOUR_ROLE_NAME \
+  --role-name <your-sagemaker-domain-execution-role> \
   --policy-name MLflowAccess \
   --policy-document file://mlflow-policy.json
 ```
 
-Replace `YOUR_ROLE_NAME` with the role name from the previous command (not the full ARN, just the role name).
+Replace ` <your-sagemaker-domain-execution-role>` with the role name from the previous command (not the full ARN, just the role name).
 
 ## Accessing the Tracking Server
 
@@ -117,7 +117,7 @@ Note: Remove the inline policy from your domain execution role manually if no lo
 
 ```bash
 aws iam delete-role-policy \
-  --role-name YOUR_ROLE_NAME \
+  --role-name  <your-sagemaker-domain-execution-role> \
   --policy-name MLflowAccess
 ```
 
