@@ -126,4 +126,4 @@ aws iam delete-role-policy \
 - [AWS CDK Python Reference](https://docs.aws.amazon.com/cdk/api/v2/python/)
 - [CfnMlflowTrackingServer Documentation](https://docs.aws.amazon.com/cdk/api/v2/python/aws_cdk.aws_sagemaker/CfnMlflowTrackingServer.html)
 - [Create an MLflow Tracking Server](https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server.html)
-- [MLflow Tracking Server IAM Permissions](https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-tracking-server-iam.html)
+- [MLflow Tracking Server IAM Permissions](https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server-iam.html)
