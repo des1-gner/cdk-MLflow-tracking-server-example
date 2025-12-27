@@ -63,7 +63,7 @@ cdk bootstrap
 cdk deploy
 ```
 
-Deployment takes approximately 5-20 minutes. Upon completion, the stack outputs will include the tracking server name, ARN, and S3 bucket name.
+Deployment takes approximately 20-25 minutes. Upon completion, the stack outputs will include the tracking server name, ARN, and S3 bucket name.
 
 ### 6. Configure Domain Execution Role Permissions
 
